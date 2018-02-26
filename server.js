@@ -28,7 +28,7 @@ app.get("/search/:term", (req, res) => {
   console.log({ term, pageNum });
   const dt = new Date();
   termArr.unshift({ "Search term": term, "Time of search": dt.toString() });
-  if (termArr.length > 10) {
+  if (termArr.length > 15) {
     termArr.pop();
   }
   client
